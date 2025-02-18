@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Up Game - DIKASTORE</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>DIKASTORE</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="topup.html">Top Up</a></li>
+                <li><a href="confirm.html">Konfirmasi</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Formulir Top-Up -->
+    <section id="topup">
+        <h2>Top Up Sekarang</h2>
+        <form id="topup-form">
+            <label for="game">Pilih Game:</label>
+            <select id="game">
+                <option value="mlbb">Mobile Legends</option>
+                <option value="freefire">Free Fire</option>
+                <option value="pubg">PUBG Mobile</option>
+            </select>
+
+            <label for="id">ID Game:</label>
+            <input type="text" id="id" required>
+
+            <label for="nominal">Nominal Top-Up:</label>
+            <select id="nominal">
+                <option value="10">10 Diamonds</option>
+                <option value="50">50 Diamonds</option>
+                <option value="100">100 Diamonds</option>
+            </select>
+
+            <label for="payment">Metode Pembayaran:</label>
+            <select id="payment">
+                <option value="qris">QRIS</option>
+                <option value="ewallet">E-Wallet</option>
+                <option value="bank">Transfer Bank</option>
+                <option value="pulsa">Pulsa</option>
+            </select>
+
+            <button type="submit" class="btn">Pesan Sekarang</button>
+        </form>
+    </section>
+
+</body>
+</html>
