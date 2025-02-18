@@ -3,57 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIKASTORE - Top Up Game</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <title>Top-Up Game - DIKASTORE</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
+        form { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
+        input, select, button { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background-color: #25D366; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #1ebe57; }
+    </style>
 </head>
 <body>
 
-    <!-- Header / Navbar -->
-    <header>
-        <h1>DIKASTORE</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="topup.html">Top Up</a></li>
-                <li><a href="confirm.html">Konfirmasi</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h2>Top-Up Game DIKASTORE</h2>
+    <form id="topupForm">
+        <label>Nama Game:</label>
+        <select id="game">
+            <option value="Mobile Legends">Mobile Legends</option>
+            <option value="Free Fire">Free Fire</option>
+            <option value="PUBG Mobile">PUBG Mobile</option>
+            <option value="Genshin Impact">Genshin Impact</option>
+        </select>
 
-    <!-- Hero Section -->
-    <section id="hero">
-        <h2>Top Up Game Murah & Cepat</h2>
-        <p>Pilihan pembayaran lengkap: QRIS, e-Wallet, Transfer Bank, Pulsa</p>
-        <a href="topup.html" class="btn">Mulai Top Up</a>
-    </section>
+        <label>ID Game:</label>
+        <input type="text" id="idGame" placeholder="Masukkan ID Game" required>
 
-    <!-- Daftar Game -->
-    <section id="games">
-        <h2>Pilih Game</h2>
-        <div class="game-list">
-            <div class="game-item">
-                <img src="img/mlbb.jpg" alt="Mobile Legends">
-                <h3>Mobile Legends</h3>
-                <a href="topup.html" class="btn">Top Up</a>
-            </div>
-            <div class="game-item">
-                <img src="img/freefire.jpg" alt="Free Fire">
-                <h3>Free Fire</h3>
-                <a href="topup.html" class="btn">Top Up</a>
-            </div>
-            <div class="game-item">
-                <img src="img/pubg.jpg" alt="PUBG Mobile">
-                <h3>PUBG Mobile</h3>
-                <a href="topup.html" class="btn">Top Up</a>
-            </div>
-        </div>
-    </section>
+        <label>Jumlah Top-Up:</label>
+        <select id="jumlah">
+            <option value="50 Diamonds">50 Diamonds</option>
+            <option value="100 Diamonds">100 Diamonds</option>
+            <option value="500 Diamonds">500 Diamonds</option>
+            <option value="1000 Diamonds">1000 Diamonds</option>
+        </select>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 DIKASTORE. Semua Hak Dilindungi.</p>
-    </footer>
+        <label>Metode Pembayaran:</label>
+        <select id="pembayaran">
+            <option value="QRIS">QRIS</option>
+            <option value="DANA">DANA</option>
+            <option value="OVO">OVO</option>
+            <option value="GoPay">GoPay</option>
+            <option value="Transfer Bank">Transfer Bank</option>
+            <option value="Pulsa">Pulsa</option>
+        </select>
+
+        <button type="button" onclick="kirimWhatsApp()">Konfirmasi Top-Up</button>
+    </form>
+
+    <script>
+        function kirimWhatsApp() {
+            var nomorWA = "082165354788";
+            var game = document.getElementById("game").value;
+            var idGame = document.getElementById("idGame").value;
+            var jumlah = document.getElementById("jumlah").value;
+            var pembayaran = document.getElementById("pembayaran").value;
+
+            if (idGame === "") {
+                alert("Harap masukkan ID Game!");
+                return;
+            }
+
+            var pesan = `Halo Admin DIKASTORE! Saya ingin top-up:\n\n` +
+                        `🎮 Game: ${game}\n` +
+                        `🆔 ID Game: ${idGame}\n` +
+                        `💎 Jumlah: ${jumlah}\n` +
+                        `💰 Pembayaran: ${pembayaran}\n\n` +
+                        `Mohon konfirmasinya. Terima kasih!`;
+
+            var linkWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
+            window.location.href = linkWA;
+        }
+    </script>
 
 </body>
 </html>
