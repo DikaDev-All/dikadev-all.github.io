@@ -3,75 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top-Up Game - DIKASTORE</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; margin: 20px; }
-        form { max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 10px; }
-        input, select, button { width: 100%; padding: 10px; margin: 10px 0; }
-        button { background-color: #25D366; color: white; border: none; cursor: pointer; }
-        button:hover { background-color: #1ebe57; }
-    </style>
+    <title>All Link - DikaDev</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
+        <img src="foto-profil.jpg" alt="Foto Profil">
+        <h1>DikaDev</h1>
+        <p class="tagline">Tempat semua link pentingku! 🚀</p>
+        
+        <div class="links">
+            <a href="https://www.instagram.com/ashuuboy__02" class="button">📸 Instagram</a>
+            <a href="https://chat.whatsapp.com/BQBabknDvqL7Zx7F2fBhjO" class="button">💬 Grup WhatsApp</a>
+            <a href="https://www.tiktok.com/@explore_online1" class="button">🎵 TikTok</a>
+            <a href="https://dikadev-all.github.io" class="button">💻 GitHub</a>
+        </div>
+    </div>
 
-    <h2>Top-Up Game DIKASTORE</h2>
-    <form id="topupForm">
-        <label>Nama Game:</label>
-        <select id="game">
-            <option value="Mobile Legends">Mobile Legends</option>
-            <option value="Free Fire">Free Fire</option>
-            <option value="PUBG Mobile">PUBG Mobile</option>
-            <option value="Genshin Impact">Genshin Impact</option>
-        </select>
-
-        <label>ID Game:</label>
-        <input type="text" id="idGame" placeholder="Masukkan ID Game" required>
-
-        <label>Jumlah Top-Up:</label>
-        <select id="jumlah">
-            <option value="50 Diamonds">50 Diamonds</option>
-            <option value="100 Diamonds">100 Diamonds</option>
-            <option value="500 Diamonds">500 Diamonds</option>
-            <option value="1000 Diamonds">1000 Diamonds</option>
-        </select>
-
-        <label>Metode Pembayaran:</label>
-        <select id="pembayaran">
-            <option value="QRIS">QRIS</option>
-            <option value="DANA">DANA</option>
-            <option value="OVO">OVO</option>
-            <option value="GoPay">GoPay</option>
-            <option value="Transfer Bank">Transfer Bank</option>
-            <option value="Pulsa">Pulsa</option>
-        </select>
-
-        <button type="button" onclick="kirimWhatsApp()">Konfirmasi Top-Up</button>
-    </form>
-
-    <script>
-        function kirimWhatsApp() {
-            var nomorWA = "082165354788";
-            var game = document.getElementById("game").value;
-            var idGame = document.getElementById("idGame").value;
-            var jumlah = document.getElementById("jumlah").value;
-            var pembayaran = document.getElementById("pembayaran").value;
-
-            if (idGame === "") {
-                alert("Harap masukkan ID Game!");
-                return;
-            }
-
-            var pesan = `Halo Admin DIKASTORE! Saya ingin top-up:\n\n` +
-                        `🎮 Game: ${game}\n` +
-                        `🆔 ID Game: ${idGame}\n` +
-                        `💎 Jumlah: ${jumlah}\n` +
-                        `💰 Pembayaran: ${pembayaran}\n\n` +
-                        `Mohon konfirmasinya. Terima kasih!`;
-
-            var linkWA = `https://wa.me/${nomorWA}?text=${encodeURIComponent(pesan)}`;
-            window.location.href = linkWA;
-        }
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
