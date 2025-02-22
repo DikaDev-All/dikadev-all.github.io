@@ -1,42 +1,126 @@
+/* Import font keren dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: #f4f4f4;
-}
-
-header {
-    background: #222;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
     color: white;
-    padding: 15px;
+    height: 100vh;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
+/* Efek masuk halaman */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-nav ul li {
-    margin: 0 15px;
+/* Container dengan efek kaca */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    max-width: 400px;
+    width: 90%;
+    opacity: 0;
+    animation: slideIn 1s ease-in-out forwards;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
+/* Animasi slide-in */
+@keyframes slideIn {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
 }
 
-#hero {
-    padding: 50px;
-    background: #007BFF;
-    color: white;
+/* Foto profil */
+img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-bottom: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
-.btn {
-    padding: 10px 20px;
-    background: #FF6600;
-    color: white;
-    text-decoration: none;
+/* Nama */
+h1 {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+/* Tagline dengan efek mengetik */
+.tagline {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 20px;
     display: inline-block;
-    margin-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    animation: typing 4s steps(30, end) infinite, blink 0.8s infinite;
+}
+
+/* Efek mengetik */
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Tombol interaktif */
+.button {
+    display: block;
+    margin: 12px auto;
+    padding: 15px;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    width: 85%;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek glowing saat hover */
+.button::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 40%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.button:hover::before {
+    opacity: 1;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 65, 108, 0.8);
+}
+
+/* Responsif */
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
 }
