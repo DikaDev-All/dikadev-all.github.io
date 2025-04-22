@@ -1,4 +1,3 @@
-
 function selectGame(name) {
   document.getElementById('game').value = name;
 }
