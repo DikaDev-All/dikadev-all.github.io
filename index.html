@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dika TopUp</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>DikaTopUp Store</h1>
+    <p>Top-up otomatis cepat dan terpercaya!</p>
+  </header>
+
+  <section class="games">
+    <h2>Pilih Game</h2>
+    <div class="game-list">
+      <button onclick="selectGame('Mobile Legends')">Mobile Legends</button>
+      <button onclick="selectGame('Free Fire')">Free Fire</button>
+      <button onclick="selectGame('PUBG Mobile')">PUBG Mobile</button>
+      <button onclick="selectGame('Genshin Impact')">Genshin Impact</button>
+      <button onclick="selectGame('Higgs Domino')">Higgs Domino</button>
+      <button onclick="selectGame('Valorant')">Valorant</button>
+      <button onclick="selectGame('Call of Duty Mobile')">Call of Duty</button>
+      <button onclick="selectGame('Point Blank')">Point Blank</button>
+      <button onclick="selectGame('Steam Wallet')">Steam Wallet</button>
+      <button onclick="selectGame('Pulsa')">Pulsa All Operator</button>
+    </div>
+  </section>
+
+  <section class="form-section">
+    <h2>Form Top-Up</h2>
+    <form id="topupForm">
+      <input type="text" id="game" placeholder="Game" readonly required>
+      <input type="text" id="id" placeholder="User ID" required>
+      <input type="text" id="nickname" placeholder="Nickname (Opsional)">
+      <select id="nominal" required>
+        <option value="">Pilih Nominal</option>
+        <option value="5">5 Diamonds</option>
+        <option value="12">12 Diamonds</option>
+        <option value="50">50 Diamonds</option>
+        <option value="100">100 Diamonds</option>
+        <option value="150">150 Diamonds</option>
+      </select>
+      <button type="submit">Bayar Sekarang</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 DikaTopUp. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
