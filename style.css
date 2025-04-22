@@ -1,62 +1,15 @@
-
+/* Style for the website */
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
+  font-family: 'Poppins', sans-serif;
 }
-header {
-  background: #007bff;
-  color: white;
-  padding: 1rem;
-  text-align: center;
+
+/* Hover Effects for Buttons */
+a:hover {
+  text-decoration: none;
+  transform: scale(1.05);
 }
-.games, .form-section {
-  padding: 1rem;
-  max-width: 600px;
-  margin: auto;
-}
-.game-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-.game-list button {
-  padding: 10px;
-  background: white;
-  border: 2px solid #007bff;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.game-list button:hover {
-  background: #007bff;
-  color: white;
-}
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-form input, form select {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-}
-form button {
-  background: #28a745;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-form button:hover {
-  background: #218838;
-}
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: white;
+
+/* Custom styles */
+.bg-gradient-to-r {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
 }
