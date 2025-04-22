@@ -1,55 +1,78 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dika TopUp</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top-Up Game DikaXD</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-  <header>
-    <h1>DikaTopUp Store</h1>
-    <p>Top-up otomatis cepat dan terpercaya!</p>
-  </header>
+<body class="bg-gradient-to-r from-purple-600 to-blue-600 font-sans">
 
-  <section class="games">
-    <h2>Pilih Game</h2>
-    <div class="game-list">
-      <button onclick="selectGame('Mobile Legends')">Mobile Legends</button>
-      <button onclick="selectGame('Free Fire')">Free Fire</button>
-      <button onclick="selectGame('PUBG Mobile')">PUBG Mobile</button>
-      <button onclick="selectGame('Genshin Impact')">Genshin Impact</button>
-      <button onclick="selectGame('Higgs Domino')">Higgs Domino</button>
-      <button onclick="selectGame('Valorant')">Valorant</button>
-      <button onclick="selectGame('Call of Duty Mobile')">Call of Duty</button>
-      <button onclick="selectGame('Point Blank')">Point Blank</button>
-      <button onclick="selectGame('Steam Wallet')">Steam Wallet</button>
-      <button onclick="selectGame('Pulsa')">Pulsa All Operator</button>
+  <!-- Navbar -->
+  <nav class="bg-gray-900 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-3xl font-bold hover:text-yellow-400 transition-all">DikaXD Top-Up</a>
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="#games" class="hover:text-yellow-400">Games</a></li>
+        <li><a href="#contact" class="hover:text-yellow-400">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="flex items-center justify-center h-screen text-center text-white">
+    <div>
+      <h1 class="text-5xl font-extrabold mb-4">Top-Up Game dengan DikaXD</h1>
+      <p class="text-lg mb-6">Proses cepat, aman, dan mudah melalui WhatsApp. Hubungi kami untuk top-up sekarang!</p>
+      <a href="https://wa.me/6282165354788" class="px-6 py-3 bg-yellow-500 text-black rounded-full text-lg hover:bg-yellow-400 transition-all">Hubungi via WhatsApp</a>
     </div>
   </section>
 
-  <section class="form-section">
-    <h2>Form Top-Up</h2>
-    <form id="topupForm">
-      <input type="text" id="game" placeholder="Game" readonly required>
-      <input type="text" id="id" placeholder="User ID" required>
-      <input type="text" id="nickname" placeholder="Nickname (Opsional)">
-      <select id="nominal" required>
-        <option value="">Pilih Nominal</option>
-        <option value="5">5 Diamonds</option>
-        <option value="12">12 Diamonds</option>
-        <option value="50">50 Diamonds</option>
-        <option value="100">100 Diamonds</option>
-        <option value="150">150 Diamonds</option>
-      </select>
-      <button type="submit">Bayar Sekarang</button>
-    </form>
+  <!-- Foto Section -->
+  <section class="py-16 bg-gray-800 text-center text-white" id="foto">
+    <h2 class="text-3xl font-bold mb-6">Foto Saya DikaXD</h2>
+    <div class="mx-auto w-52 h-52 mb-4">
+      <img src="images/foto-dikaxd.jpg" alt="DikaXD" class="rounded-full shadow-xl w-full h-full object-cover">
+    </div>
+    <p>Ini adalah foto saya, DikaXD. Saya siap membantu Anda melakukan top-up dengan mudah dan cepat!</p>
   </section>
 
-  <footer>
-    <p>&copy; 2025 DikaTopUp. All rights reserved.</p>
+  <!-- Game List Section -->
+  <section id="games" class="py-16 bg-gray-700 text-center text-white">
+    <h2 class="text-3xl font-bold mb-8">Daftar Game yang Bisa Di-Top-Up</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all">
+        <h3 class="text-2xl font-semibold mb-4">Game 1</h3>
+        <p class="mb-4">Top-up mudah dan cepat. Nikmati gameplay terbaik!</p>
+        <a href="https://wa.me/6282165354788?text=Top-Up%20Game%201" class="block px-4 py-2 bg-yellow-500 text-black rounded-lg hover:bg-yellow-400 transition-all">Top-Up Sekarang</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all">
+        <h3 class="text-2xl font-semibold mb-4">Game 2</h3>
+        <p class="mb-4">Top-up mudah dan cepat. Nikmati gameplay terbaik!</p>
+        <a href="https://wa.me/6282165354788?text=Top-Up%20Game%202" class="block px-4 py-2 bg-yellow-500 text-black rounded-lg hover:bg-yellow-400 transition-all">Top-Up Sekarang</a>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-all">
+        <h3 class="text-2xl font-semibold mb-4">Game 3</h3>
+        <p class="mb-4">Top-up mudah dan cepat. Nikmati gameplay terbaik!</p>
+        <a href="https://wa.me/6282165354788?text=Top-Up%20Game%203" class="block px-4 py-2 bg-yellow-500 text-black rounded-lg hover:bg-yellow-400 transition-all">Top-Up Sekarang</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-900 text-center text-white">
+    <h2 class="text-3xl font-bold mb-6">Hubungi Kami</h2>
+    <p class="mb-4">Jika Anda membutuhkan bantuan atau memiliki pertanyaan, silakan hubungi kami langsung melalui WhatsApp.</p>
+    <a href="https://wa.me/6282165354788" class="px-6 py-3 bg-yellow-500 text-black rounded-full text-lg hover:bg-yellow-400 transition-all">Hubungi via WhatsApp</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>&copy; 2025 DikaXD. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
-</html>
+  </html>
