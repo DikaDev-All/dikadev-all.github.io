@@ -1,61 +1,67 @@
 body {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f4f4f4;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
 }
 header {
-  background: #007bff;
-  color: white;
-  padding: 1rem;
-  text-align: center;
+    background: #222;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
 }
-.games, .form-section {
-  padding: 1rem;
-  max-width: 600px;
-  margin: auto;
+nav a {
+    margin: 0 1em;
+    color: #0ff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
-.game-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
+nav a:hover {
+    color: #fff;
 }
-.game-list button {
-  padding: 10px;
-  background: white;
-  border: 2px solid #007bff;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s;
+.animated-title {
+    font-size: 2em;
+    animation: glow 2s infinite alternate;
 }
-.game-list button:hover {
-  background: #007bff;
-  color: white;
+@keyframes glow {
+    from { text-shadow: 0 0 5px #0ff; }
+    to { text-shadow: 0 0 20px #0ff; }
 }
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+main {
+    padding: 2em;
 }
-form input, form select {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+form input, form select, form button {
+    display: block;
+    margin: 1em auto;
+    padding: 0.5em;
+    width: 90%;
+    max-width: 400px;
 }
 form button {
-  background: #28a745;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  cursor: pointer;
+    background: #0ff;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
 }
 form button:hover {
-  background: #218838;
+    background: #0cc;
 }
 footer {
-  text-align: center;
-  padding: 1rem;
-  background: #222;
-  color: white;
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+body.dark-mode {
+    background-color: #111;
+    color: #eee;
+}
+body.light-mode {
+    background-color: #fff;
+    color: #000;
 }
