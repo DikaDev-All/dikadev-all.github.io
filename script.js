@@ -1,13 +1,13 @@
-function selectGame(name) {
-  document.getElementById('game').value = name;
+function toggleMode() {
+    document.body.classList.toggle("dark-mode");
+    document.body.classList.toggle("light-mode");
 }
-
-document.getElementById('topupForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const game = document.getElementById('game').value;
-  const id = document.getElementById('id').value;
-  const nick = document.getElementById('nickname').value;
-  const nominal = document.getElementById('nominal').value;
-  const msg = `Halo, saya ingin top-up ${game}%0AID: ${id}%0ANama: ${nick}%0ANominal: ${nominal} Diamonds`;
-  window.open(`https://wa.me/6285189450177?text=${msg}`, '_blank');
-});
+function goToWhatsApp() {
+    const user = document.getElementById("username").value;
+    const game = document.getElementById("game").value;
+    const jumlah = document.getElementById("jumlah").value;
+    const msg = `Halo, saya ingin top-up ${game}\nID: ${user}\nJumlah: ${jumlah}`;
+    const url = "https://wa.me/6282165354788?text=" + encodeURIComponent(msg);
+    window.open(url, '_blank');
+    return false;
+}
