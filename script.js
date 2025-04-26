@@ -4,7 +4,7 @@ function toggleMode() {
 }
 function goToWhatsApp() {
     const user = document.getElementById("username").value;
-    const game = document.getElementById("game").value;
+    const game = document.getElementById("Pilihan").value;
     const jumlah = document.getElementById("jumlah").value;
     const msg = `Halo, saya ingin top-up ${game}\nID: ${user}\nJumlah: ${jumlah}`;
     const url = "https://wa.me/6285189450177?text=" + encodeURIComponent(msg);
