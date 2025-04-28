@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surga Panel & SC</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      text-align: center;
+    }
+    img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+    a {
+      text-decoration: none;
+      color: blue;
+      margin: 0 5px;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .links {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+
+  <img src="your-profile-image-link.png" alt="Profile">
+  
+  <h1>Surga Panel & SC</h1>
+  <p>Semua Link Penting Ada Disini!</p>
+
+  <div class="links">
+    <a href="#">Saluran WhatsApp</a>
+    <a href="#">Chat Admin</a>
+    <a href="#">Grup SC Gratis</a>
+    <a href="#">Website & Tools</a>
+    <a href="#">YouTube Channel</a>
+    <a href="#">TikTok Explore</a>
+    <a href="#">Tutorial Claim Panel</a>
+    <a href="#">Link Tambahan Lain</a>
+  </div>
+
+  <footer style="margin-top: 30px;">
+    © 2025 Surga Panel & SC
+  </footer>
+
+</body>
+</html>
