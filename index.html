@@ -1,51 +1,86 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>TopUp Dika</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Linktree Dika</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1a004e, #85006a);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    .marquee {
+      background: #ff00cc;
+      padding: 10px;
+      color: #fff;
+      font-weight: bold;
+      animation: slide 10s linear infinite;
+      white-space: nowrap;
+    }
+    @keyframes slide {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .container {
+      padding: 20px;
+    }
+    .link-button {
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid #fff;
+      border-radius: 30px;
+      margin: 15px auto;
+      width: 80%;
+      max-width: 400px;
+      padding: 15px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .link-button:hover {
+      background: #fff;
+      color: #85006a;
+      transform: scale(1.05);
+    }
+    .bottom-menu {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 0;
+      border-top: 1px solid #fff;
+    }
+    .bottom-menu div {
+      color: white;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
+  <div class="marquee">Selamat datang di Link DikaXD - Temukan semua tautan penting di sini!</div>
   <div class="container">
-    <h1>TopUp Dika</h1>
-    <p>Pilih layanan yang kamu butuhkan:</p>
-
-    <!-- Kategori Game -->
-    <h2>Game</h2>
-    <a href="https://wa.me/6282165354788?text=Top%20Up%20Mobile%20Legends" class="link">Mobile Legends</a>
-    <a href="https://wa.me/6282165354788?text=Top%20Up%20Free%20Fire" class="link">Free Fire</a>
-    <a href="https://wa.me/6282165354788?text=Top%20Up%20PUBG%20Mobile" class="link">PUBG Mobile</a>
-    <a href="https://wa.me/6282165354788?text=Top%20Up%20Higgs%20Domino" class="link">Higgs Domino</a>
-    <a href="https://wa.me/6282165354788?text=Top%20Up%20Genshin%20Impact" class="link">Genshin Impact</a>
-    <a href="https://wa.me/6282165354788?text=Top%20Up%20Valorant" class="link">Valorant</a>
-    <a href="https://wa.me/6282165354788?text=Top%20Up%20Call%20of%20Duty%20Mobile" class="link">COD Mobile</a>
-
-    <!-- Kategori Pulsa & Data -->
-    <h2>Pulsa & Paket Data</h2>
-    <a href="https://wa.me/6282165354788?text=Beli%20Pulsa%20Semua%20Operator" class="link">Pulsa Semua Operator</a>
-    <a href="https://wa.me/6282165354788?text=Beli%20Paket%20Data%20Telkomsel" class="link">Paket Data Telkomsel</a>
-    <a href="https://wa.me/6282165354788?text=Beli%20Paket%20Data%20XL%2FAxis" class="link">Paket Data XL/Axis</a>
-    <a href="https://wa.me/6282165354788?text=Beli%20Paket%20Data%20Tri" class="link">Paket Data Tri</a>
-    <a href="https://wa.me/6282165354788?text=Beli%20Paket%20Data%20Indosat" class="link">Paket Data Indosat</a>
-
-    <!-- Kategori E-Wallet -->
-    <h2>E-Wallet</h2>
-    <a href="https://wa.me/6282165354788?text=Top%20Up%20Saldo%20DANA" class="link">Saldo DANA</a>
-    <a href="https://wa.me/6282165354788?text=Top%20Up%20Saldo%20OVO" class="link">Saldo OVO</a>
-    <a href="https://wa.me/6282165354788?text=Top%20Up%20Saldo%20GoPay" class="link">Saldo GoPay</a>
-    <a href="https://wa.me/6282165354788?text=Top%20Up%20Saldo%20ShopeePay" class="link">Saldo ShopeePay</a>
-
-    <!-- Kategori Voucher Digital -->
-    <h2>Voucher Digital</h2>
-    <a href="https://wa.me/6282165354788?text=Beli%20Voucher%20Google%20Play" class="link">Voucher Google Play</a>
-    <a href="https://wa.me/6282165354788?text=Beli%20Voucher%20Garena" class="link">Voucher Garena</a>
-    <a href="https://wa.me/6282165354788?text=Beli%20Voucher%20Steam%20Wallet" class="link">Voucher Steam Wallet</a>
-    <a href="https://wa.me/6282165354788?text=Beli%20Voucher%20PlayStation" class="link">Voucher PlayStation</a>
-
-    <footer>
-      <p>&copy; 2025 TopUp Dika</p>
-    </footer>
+    <h1>DikaXD</h1>
+    <div class="link-button">INFO UPDATE</div>
+    <div class="link-button">Produk [Rostock]</div>
+    <div class="link-button">STORE</div>
+    <div class="link-button">WEBSITE FREE [DikaXD]</div>
+    <div class="link-button">WEB OFC [DikaXD]</div>
+    <div class="link-button">APK MOD</div>
+    <div class="link-button">Sc Whatsapp</div>
+    <div class="link-button">PANEL FREE</div>
+    <div class="link-button">Tutorial Claim</div>
+  </div>
+  <div class="bottom-menu">
+    <div>Penampilan</div>
+    <div>Sortir</div>
+    <div>Beralih</div>
   </div>
 </body>
-  </html>
+      </html>
