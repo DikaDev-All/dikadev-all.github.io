@@ -1,67 +1,61 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DikaXD</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Top-Up Manual</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f5f5f5; padding: 20px; }
+    .container { max-width: 500px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+    input, select, textarea { width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    button { background-color: #28a745; color: white; border: none; padding: 10px 20px; margin-top: 15px; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #218838; }
+  </style>
 </head>
-<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-white min-h-screen flex flex-col items-center justify-start py-10">
+<body>
+  <div class="container">
+    <h2>Form Top-Up Manual</h2>
+    <form action="https://formsubmit.co/dukezenz1423@email.com" method="POST" enctype="multipart/form-data">
+      <label for="name">Nama Lengkap</label>
+      <input type="text" name="nama" required />
 
-  <!-- Foto Profil -->
-  <img src="https://files.catbox.moe/yk3sv3.jpg" alt="Profile" class="w-24 h-24 rounded-full object-cover mb-4 shadow-lg">
+      <label for="id">ID Game / Nomor Tujuan</label>
+      <input type="text" name="id_game" required />
 
-  <!-- Nama Channel -->
-  <h1 class="text-2xl font-bold mb-2 text-center">DIKAXD Ganteng 😂</h1>
-  <p class="text-gray-400 text-sm mb-8 text-center">Semua Link Penting Ada Disini!</p>
+      <label for="game">Layanan</label>
+      <select name="layanan" required>
+        <option value="">Pilih</option>
+        <option value="Mobile Legends">Mobile Legends</option>
+        <option value="Free Fire">Free Fire</option>
+        <option value="Pulsa">Pulsa</option>
+        <option value="Data Internet">Data Internet</option>
+      </select>
 
-  <!-- Semua Link Button -->
-  <div class="w-full max-w-sm flex flex-col space-y-4">
+      <label for="nominal">Nominal</label>
+      <select name="nominal" required>
+        <option value="">Pilih</option>
+        <option value="10.000">10.000</option>
+        <option value="20.000">20.000</option>
+        <option value="50.000">50.000</option>
+        <option value="100.000">100.000</option>
+      </select>
 
-    <a href="https://whatsapp.com/channel/0029VbABthoKgsNpuzmuqt1R" target="_blank" 
-       class="bg-green-500 hover:bg-green-600 py-3 rounded-xl text-center font-semibold transition transform hover:scale-105">
-      📣 Saluran WhatsApp
-    </a>
+      <label for="pembayaran">Metode Pembayaran</label>
+      <input type="text" name="pembayaran" value="DANA" readonly />
 
-    <a href="https://wa.me/6285189450177" target="_blank" 
-       class="bg-emerald-500 hover:bg-green-600 py-3 rounded-xl text-center font-semibold transition transform hover:scale-105">
-      ✉️ Chat Admin
-    </a>
+      <label for="bukti">Upload Bukti Transfer</label>
+      <input type="file" name="bukti" accept="image/*" required />
 
-    <a href="https://chat.whatsapp.com/JjxHWjz410vFI4MDdfuJS8" target="_blank" 
-       class="bg-blue-500 hover:bg-green-600 py-3 rounded-xl text-center font-semibold transition transform hover:scale-105">
-      🎁 Grup SC Gratis
-    </a>
+      <label for="catatan">Catatan Tambahan (opsional)</label>
+      <textarea name="catatan" rows="3"></textarea>
 
-    <a href="https://linkbio.co/7050601I5seNc" target="_blank" 
-       class="bg-purple-500 hover:bg-green-600 py-3 rounded-xl text-center font-semibold transition transform hover:scale-105">
-      ⚡ Website & Tools
-    </a>
+      <!-- Anti bot -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Redirect setelah submit -->
+      <input type="hidden" name="_next" value="https://yourdomain.github.io/thankyou.html">
 
-    <a href="https://youtube.com/@dikaxd-official?si=UjfqpLxx5YgwiSJA" target="_blank" 
-       class="bg-red-500 hover:bg-green-600 py-3 rounded-xl text-center font-semibold transition transform hover:scale-105">
-      ▶️ YouTube Channel
-    </a>
-
-    <a href="https://www.tiktok.com/@explore_online1?_t=ZS-8vuRMsWGltv&_r=1" target="_blank" 
-       class="bg-pink-500 hover:bg-green-600 py-3 rounded-xl text-center font-semibold transition transform hover:scale-105">
-      🎵 TikTok Explore
-    </a>
-
-    <a href="https://www.mediafire.com/file/b6lm8yqdwzrauvp/cara_claim_panel.txt/file" target="_blank" 
-       class="bg-yellow-500 hover:bg-green-600 py-3 rounded-xl text-center font-semibold transition transform hover:scale-105">
-      🎯 Tutorial Claim Panel (update)
-    </a>
-
-    <a href="https://linkbio.co/7050601I5seNc" target="_blank" 
-       class="bg-indigo-500 hover:bg-indigo-600 py-3 rounded-xl text-center font-semibold transition transform hover:scale-105">
-      🚀 Link Download SC
-    </a>
-
+      <button type="submit">Kirim Permintaan Top-Up</button>
+    </form>
   </div>
-
-  <!-- Footer -->
-  <p class="text-xs text-gray-500 mt-10 text-center">© DikaXD-2025</p>
-
 </body>
-      </html>
+</html>
