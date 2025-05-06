@@ -1,66 +1,52 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-}
-
-header {
-  background-color: #007bff;
-  color: white;
   text-align: center;
-  padding: 20px;
 }
 
-.logo {
-  width: 80px;
-  height: auto;
+.container {
+  padding: 30px;
+  max-width: 500px;
+  margin: auto;
+}
+
+h1 {
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+h2 {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #444;
+  font-size: 20px;
+}
+
+p {
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.link {
   display: block;
-  margin: 0 auto 10px;
-}
-
-nav a {
-  margin: 0 10px;
+  background: #007bff;
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background 0.3s;
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-main {
-  padding: 20px;
-  text-align: center;
-}
-
-h1, h2 {
-  margin-top: 0;
-}
-
-ul, ol {
-  text-align: left;
-  max-width: 400px;
-  margin: 10px auto;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  background-color: #0056b3;
+.link:hover {
+  background: #0056b3;
 }
 
 footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #ddd;
+  margin-top: 40px;
+  font-size: 13px;
+  color: #777;
 }
