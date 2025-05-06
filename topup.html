@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Top Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Formulir Top-Up</h1>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="layanan.html">Layanan</a>
+      <a href="topup.html">Top Up</a>
+    </nav>
+  </header>
+  <main>
+    <form id="formTopup" onsubmit="kirimWA(); return false;">
+      <label>Nama:</label>
+      <input type="text" id="nama" required>
+
+      <label>Game/Layanan:</label>
+      <input type="text" id="layanan" required>
+
+      <label>User ID/Game ID:</label>
+      <input type="text" id="id" required>
+
+      <label>Nominal Top-Up:</label>
+      <input type="text" id="nominal" required>
+
+      <label>Metode Pembayaran:</label>
+      <select id="pembayaran" required>
+        <option>DANA</option>
+        <option>OVO</option>
+        <option>Gopay</option>
+        <option>QRIS</option>
+        <option>Pulsa</option>
+        <option>Transfer Bank</option>
+      </select>
+
+      <button type="submit">Kirim via WhatsApp</button>
+    </form>
+  </main>
+  <footer>&copy; 2025 TopUp Dika</footer>
+
+  <script>
+    function kirimWA() {
+      var nama = document.getElementById("nama").value;
+      var layanan = document.getElementById("layanan").value;
+      var id = document.getElementById("id").value;
+      var nominal = document.getElementById("nominal").value;
+      var pembayaran = document.getElementById("pembayaran").value;
+
+      var noAdmin = "6285189450177"; // Nomor admin
+      var pesan = `Halo Admin, saya ingin top-up:\n\nNama: ${nama}\nLayanan: ${layanan}\nID: ${id}\nNominal: ${nominal}\nPembayaran: ${pembayaran}`;
+      window.open(`https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`);
+    }
+  </script>
+</body>
+</html>
