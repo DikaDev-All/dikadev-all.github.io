@@ -1,63 +1,142 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Surga Panel & SC</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      min-height: 100vh;
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #ffffff;
-      text-align: center;
-    }
-    img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-    a {
-      text-decoration: none;
-      color: blue;
-      margin: 0 5px;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    .links {
-      margin-top: 20px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-  </style>
-</head>
-<body>
+/* Reset & Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <img src="your-profile-image-link.png" alt="Profile">
-  
-  <h1>Surga Panel & SC</h1>
-  <p>Semua Link Penting Ada Disini!</p>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+}
 
-  <div class="links">
-    <a href="#">Saluran WhatsApp</a>
-    <a href="#">Chat Admin</a>
-    <a href="#">Grup SC Gratis</a>
-    <a href="#">Website & Tools</a>
-    <a href="#">YouTube Channel</a>
-    <a href="#">TikTok Explore</a>
-    <a href="#">Tutorial Claim Panel</a>
-    <a href="#">Link Tambahan Lain</a>
-  </div>
+a {
+  text-decoration: none;
+  color: inherit;
+}
 
-  <footer style="margin-top: 30px;">
-    © 2025 Surga Panel & SC
-  </footer>
+/* Header */
+header {
+  background: #007bff;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
 
-</body>
-</html>
+header .logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+header h1 {
+  font-size: 24px;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffe600;
+}
+
+/* Main */
+main {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* Tombol */
+.btn,
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover,
+button:hover {
+  background-color: #218838;
+}
+
+/* Form */
+form {
+  max-width: 450px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+form label {
+  display: block;
+  text-align: left;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+form input,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Layanan */
+.layanan-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.layanan-item {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.layanan-item:hover {
+  transform: scale(1.05);
+}
+
+.layanan-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.layanan-item p {
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background: #007bff;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+    }
