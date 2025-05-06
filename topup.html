@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Form Top Up</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top Up - TopUp Dika</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Formulir Top-Up</h1>
+    <img src="https://i.imgur.com/IaUrttj.png" alt="Logo" class="logo" />
+    <h1>Top Up Sekarang</h1>
     <nav>
       <a href="index.html">Beranda</a>
       <a href="layanan.html">Layanan</a>
@@ -15,46 +17,14 @@
     </nav>
   </header>
   <main>
-    <form id="formTopup" onsubmit="kirimWA(); return false;">
-      <label>Nama:</label>
-      <input type="text" id="nama" required>
-
-      <label>Game/Layanan:</label>
-      <input type="text" id="layanan" required>
-
-      <label>User ID/Game ID:</label>
-      <input type="text" id="id" required>
-
-      <label>Nominal Top-Up:</label>
-      <input type="text" id="nominal" required>
-
-      <label>Metode Pembayaran:</label>
-      <select id="pembayaran" required>
-        <option>DANA</option>
-        <option>OVO</option>
-        <option>Gopay</option>
-        <option>QRIS</option>
-        <option>Pulsa</option>
-        <option>Transfer Bank</option>
-      </select>
-
-      <button type="submit">Kirim via WhatsApp</button>
-    </form>
+    <h2>Cara Top-Up</h2>
+    <ol>
+      <li>Pilih game atau layanan</li>
+      <li>Catat ID akun kamu</li>
+      <li>Hubungi admin WhatsApp: <a href="https://wa.me/6285189450177" target="_blank">0821-6535-4788</a></li>
+      <li>Transaksi diproses manual & cepat</li>
+    </ol>
   </main>
   <footer>&copy; 2025 TopUp Dika</footer>
-
-  <script>
-    function kirimWA() {
-      var nama = document.getElementById("nama").value;
-      var layanan = document.getElementById("layanan").value;
-      var id = document.getElementById("id").value;
-      var nominal = document.getElementById("nominal").value;
-      var pembayaran = document.getElementById("pembayaran").value;
-
-      var noAdmin = "6285189450177"; // Nomor admin
-      var pesan = `Halo Admin, saya ingin top-up:\n\nNama: ${nama}\nLayanan: ${layanan}\nID: ${id}\nNominal: ${nominal}\nPembayaran: ${pembayaran}`;
-      window.open(`https://wa.me/${noAdmin}?text=${encodeURIComponent(pesan)}`);
-    }
-  </script>
 </body>
 </html>
