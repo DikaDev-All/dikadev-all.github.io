@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Toko Online Kita — Top Up & Premium</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Partikel background -->
+  <div id="particles-js"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <h1>Toko Online Kita</h1>
+        <small>By DikaPlay — Top-up Game & Beli Premium</small>
+      </div>
+
+      <div class="actions">
+        <input id="search" type="search" placeholder="Cari game / layanan..." />
+        <button id="toggleTheme" title="Toggle theme">🌗</button>
+      </div>
+    </div>
+
+    <!-- Carousel logo game (scrollable) -->
+    <nav class="game-navbar" id="game-navbar" aria-label="Game list">
+      <!-- logo di-generate dari products.json -->
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="container">
+    <!-- Left: daftar kategori / produk -->
+    <section class="left-col">
+      <div class="card" id="catalog-card">
+        <div class="card-head">
+          <h2 id="gameTitle">Populer & Semua Layanan</h2>
+          <p id="gameSubtitle">Pilih game atau layanan dari navbar, atau cari dengan kotak pencarian.</p>
+        </div>
+
+        <div class="filters">
+          <label>
+            Kategori:
+            <select id="categoryFilter">
+              <option value="all">Semua</option>
+            </select>
+          </label>
+        </div>
+
+        <div id="product-grid" class="product-grid">
+          <!-- produk / layanan di-render di sini -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Right: form top-up -->
+    <aside class="right-col">
+      <div class="card" id="order-card">
+        <h2>Form Top-Up</h2>
+        <label>Game / Layanan</label>
+        <select id="gameSelect"></select>
+
+        <label>ID / Email / Nomor</label>
+        <input id="idInput" placeholder="Masukkan ID game atau email (untuk layanan premium)" />
+
+        <label>Paket</label>
+        <div id="paketList" class="paket-list">
+          <p class="muted">Silakan pilih game/layanan dan paket.</p>
+        </div>
+
+        <div class="order-info">
+          <div><strong>Paket:</strong> <span id="chosenPackage">-</span></div>
+          <div><strong>Harga:</strong> <span id="chosenPrice">-</span></div>
+        </div>
+
+        <button id="checkoutBtn">Bayar via WhatsApp</button>
+
+        <div class="help">
+          <small>Nomor WA: <a target="_blank" rel="noopener" href="https://wa.me/6283170869295">+62 831-7086-9295</a></small>
+        </div>
+      </div>
+
+      <div class="card" id="howto">
+        <h3>Cara Order</h3>
+        <ol>
+          <li>Pilih game / layanan</li>
+          <li>Isi ID / Email</li>
+          <li>Pilih paket</li>
+          <li>Klik <em>Bayar via WhatsApp</em> → otomatis ke WA DikaPlay</li>
+        </ol>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    &copy; 2025 <strong>Toko Online Kita</strong> — Dikelola oleh <strong>DikaPlay</strong>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
